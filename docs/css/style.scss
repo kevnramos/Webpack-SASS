@@ -1,5 +1,85 @@
-$body-color: blue;
+$font-stack: Fira Code, sans-serif;
+$primary-color: red;
+$black : black;
 
 body {
-  color: $body-color;
+  font: 100% $font-stack;
+  color: $primary-color;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: [col] auto;
+  grid-template-rows: [row] 100px [row] minmax(100px, 593px) [row] auto [row] 50px;
+}
+.container {
+  grid-column: 1;
+}
+
+.nav {
+  grid-column: 1;
+  text-align: right;
+  line-height: 100px;
+}
+
+.container, .nav {
+  grid-row: 1;
+}
+
+menu {
+  margin: 0px;
+  padding: 0px;
+}
+
+.nav li {
+  display: inline;
+
+}
+
+.nav menu a {
+  display: inline;
+  background-color: $primary-color;
+  border: none;
+  color: $black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.nav ul {
+  margin: 0px;
+}
+
+.nav li {
+  margin-left: 1rem;
+}
+
+.nav li:first-child {
+  margin-left: 0rem;
+
+}
+
+[data-component="slideshow"] .slide {
+  display: none;
+  text-align: center;
+}
+
+[data-component="slideshow"] .slide.active {
+  display: block;
+}
+
+.footer {
+  grid-row: 4;
+  grid-column: 1 / span 2;
+  text-align: center;
+  line-height: 50px;
+}
+
+
+
+
+
+
